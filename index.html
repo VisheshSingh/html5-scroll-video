@@ -51,7 +51,16 @@
         <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="fingers.mp4"></source>
     </video>
 
+    <script src="sticky.js"></script>
     <script>
+
+        enterView({
+            selector: 'section',
+            enter: function (el) {
+                el.classList.add('entered');
+            }
+        })
+
         var frameNumber = 0, // start video at frame 0
             // lower numbers = faster playback
             playbackConst = 1000,
